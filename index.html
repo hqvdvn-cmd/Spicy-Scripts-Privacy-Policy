@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spicy Scripts Privacy Policy</title>
+    <meta
+      name="description"
+      content="Privacy Policy for the Spicy Scripts Chrome extension."
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f8fb;
+        --panel: #ffffff;
+        --text: #172033;
+        --muted: #667085;
+        --line: #d9e0ea;
+        --primary: #e14d68;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        width: min(900px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0;
+      }
+
+      article {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--panel);
+        box-shadow: 0 18px 42px rgb(15 23 42 / 8%);
+        padding: clamp(24px, 5vw, 48px);
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: clamp(30px, 5vw, 46px);
+        line-height: 1.08;
+      }
+
+      h2 {
+        margin: 34px 0 10px;
+        font-size: 22px;
+        line-height: 1.2;
+      }
+
+      p,
+      li {
+        font-size: 16px;
+      }
+
+      .date {
+        margin: 0 0 30px;
+        color: var(--muted);
+        font-weight: 650;
+      }
+
+      code {
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: #f3f5f9;
+        padding: 1px 5px;
+        font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+        font-size: 0.92em;
+      }
+
+      a {
+        color: var(--primary);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>Spicy Scripts Privacy Policy</h1>
+        <p class="date">Effective date: May 18, 2026</p>
+
+        <p>
+          Spicy Scripts is a Chrome extension for saving reusable message scripts,
+          using Smart Paste, and scheduling messages in Fansly chats.
+        </p>
+
+        <h2>Data Processed by the Extension</h2>
+        <p>Spicy Scripts may process the following data when you use the extension:</p>
+        <ul>
+          <li>Saved script folders, script titles, and script message text.</li>
+          <li>Extension settings, including theme, timer delay, and Smart Paste speed.</li>
+          <li>
+            Scheduled message data, including message text, script title, send time,
+            Fansly chat URL, Fansly chat ID, and visible fan display name.
+          </li>
+          <li>Clipboard text, only when you use Smart Paste from the context menu or keyboard shortcut.</li>
+          <li>
+            Fansly message composer content, only to insert, type, verify, or schedule
+            the message you requested.
+          </li>
+          <li>
+            Local extension logs used for debugging. Logs may include event names,
+            timestamps, error messages, chat identifiers, fan display names, and message
+            length. Logs do not intentionally store full message text.
+          </li>
+        </ul>
+
+        <h2>How Data Is Stored</h2>
+        <p>
+          All extension data is stored locally in the user's browser using Chrome
+          extension storage (<code>chrome.storage.local</code>) and Chrome alarms for
+          scheduled sends.
+        </p>
+        <p>
+          Spicy Scripts does not operate a remote server, does not upload user messages,
+          and does not sell or share user data with third parties.
+        </p>
+
+        <h2>How Data Is Used</h2>
+        <p>The extension uses local data only to provide its core features:</p>
+        <ul>
+          <li>Display saved scripts in the extension popup.</li>
+          <li>Insert or type selected text into the Fansly message composer.</li>
+          <li>Read clipboard text when the user explicitly triggers Smart Paste.</li>
+          <li>Schedule a message for a specific Fansly chat while that chat tab remains available.</li>
+          <li>Restore extension settings such as theme, timer delay, and typing speed.</li>
+          <li>Troubleshoot extension behavior through local logs.</li>
+        </ul>
+
+        <h2>Chrome Permissions</h2>
+        <p>Spicy Scripts requests these permissions:</p>
+        <ul>
+          <li><code>storage</code>: saves scripts, folders, settings, timers, and local logs in Chrome storage.</li>
+          <li><code>tabs</code>: finds the active Fansly chat tab and sends commands to the correct tab.</li>
+          <li><code>alarms</code>: schedules timed message sends.</li>
+          <li><code>contextMenus</code>: adds Smart Paste actions to the normal right-click menu in Fansly message fields.</li>
+          <li><code>scripting</code>: injects the content script again if Chrome unloads it or the tab needs reconnection.</li>
+          <li><code>clipboardRead</code>: reads clipboard text only after the user explicitly triggers Smart Paste.</li>
+          <li><code>clipboardWrite</code>: supports copying saved scripts to the clipboard.</li>
+          <li><code>activeTab</code>: allows interaction with the active tab after user action.</li>
+          <li>
+            Host access to <code>https://fansly.com/*</code> and <code>https://*.fansly.com/*</code>:
+            allows the extension to find the Fansly composer, insert text, click send,
+            and read the active chat context for timers.
+          </li>
+        </ul>
+
+        <h2>Data Sharing</h2>
+        <p>Spicy Scripts does not transmit user data to external servers.</p>
+        <p>
+          The extension does not use analytics, advertising SDKs, tracking pixels, or
+          third-party data processors.
+        </p>
+
+        <h2>Data Retention and Deletion</h2>
+        <p>
+          Data remains stored locally until the user deletes it, imports a replacement
+          backup, clears browser extension data, or uninstalls the extension.
+        </p>
+        <p>Uninstalling the extension removes its Chrome extension storage data.</p>
+
+        <h2>User Control</h2>
+        <p>Users can:</p>
+        <ul>
+          <li>Edit or delete saved scripts from the extension popup.</li>
+          <li>Cancel active timers.</li>
+          <li>Export or import local backups.</li>
+          <li>Clear extension data by removing the extension from Chrome.</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>
+          For support or privacy questions, contact the developer using the support email
+          provided in the Chrome Web Store listing.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>
