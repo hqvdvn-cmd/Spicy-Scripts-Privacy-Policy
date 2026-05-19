@@ -14,6 +14,7 @@ Spicy Scripts may process the following data when you use the extension:
 - Clipboard text, only when you use Smart Paste from the context menu or keyboard shortcut.
 - Fansly message composer content, only to insert, type, verify, or schedule the message you requested.
 - Local extension logs used for debugging. Logs may include event names, timestamps, error messages, chat identifiers, fan display names, and message length. Logs do not intentionally store full message text.
+- Timer notification content, including a short local preview of the scheduled message, may be shown by Chrome when a timer fires.
 
 ## How Data Is Stored
 
@@ -41,6 +42,7 @@ Spicy Scripts requests these permissions:
 - `alarms`: schedules timed message sends.
 - `contextMenus`: adds Smart Paste actions to the normal right-click menu in Fansly message fields.
 - `scripting`: injects the content script again if Chrome unloads it or the tab needs reconnection.
+- `notifications`: shows a local Chrome notification when a scheduled timer fires, succeeds, or cannot be sent.
 - `clipboardRead`: reads clipboard text only after the user explicitly triggers Smart Paste.
 - `clipboardWrite`: supports copying saved scripts to the clipboard.
 - `activeTab`: allows interaction with the active tab after user action.

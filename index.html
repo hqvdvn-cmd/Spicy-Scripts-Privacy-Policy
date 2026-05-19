@@ -112,6 +112,10 @@
             timestamps, error messages, chat identifiers, fan display names, and message
             length. Logs do not intentionally store full message text.
           </li>
+          <li>
+            Timer notification content, including a short local preview of the scheduled
+            message, may be shown by Chrome when a timer fires.
+          </li>
         </ul>
 
         <h2>How Data Is Stored</h2>
@@ -144,6 +148,7 @@
           <li><code>alarms</code>: schedules timed message sends.</li>
           <li><code>contextMenus</code>: adds Smart Paste actions to the normal right-click menu in Fansly message fields.</li>
           <li><code>scripting</code>: injects the content script again if Chrome unloads it or the tab needs reconnection.</li>
+          <li><code>notifications</code>: shows a local Chrome notification when a scheduled timer fires, succeeds, or cannot be sent.</li>
           <li><code>clipboardRead</code>: reads clipboard text only after the user explicitly triggers Smart Paste.</li>
           <li><code>clipboardWrite</code>: supports copying saved scripts to the clipboard.</li>
           <li><code>activeTab</code>: allows interaction with the active tab after user action.</li>
